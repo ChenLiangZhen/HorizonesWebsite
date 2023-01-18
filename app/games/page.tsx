@@ -1,3 +1,6 @@
+
+import {MoonLoader} from "react-spinners";
+
 async function getProducts(){
 	const res = await fetch('https://dummyjson.com/products')
 	const data = await res.json()
@@ -12,7 +15,8 @@ export default async function Game(){
 	return(
 		<div>
 			{products.map(product =>  <div>{product.title}</div>)}
+
 		</div>
 	)
 }
-4
+
