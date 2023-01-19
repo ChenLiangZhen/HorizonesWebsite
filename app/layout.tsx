@@ -1,4 +1,5 @@
 import './globals.css'
+import React from "react";
 import styles from './layout.module.css'
 import Footer from "@/components/Footer";
 import Link from "next/link";
@@ -10,33 +11,24 @@ export default function RootLayout({
 }) {
 
   return (
+
     <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
-      <head/>
-      <body>
 
-      <div className={styles.header}>
-
-         <Link style={{ marginRight: 16 }} href={"/"}>
-            <div>ROOT</div>
-         </Link>
-
-         <Link href={"/games"}>
-            <div>Games</div>
-         </Link>
-
-      </div>
+    <head/>
 
 
-      <div>ROOTLAYOUT</div>
+       <body>
 
-      {children}
+       <div className={styles.baseLayout}>
+          {children}
 
-      <Footer/>
-      </body>
+          <div className={styles.footer}>
+             Copyright © Horizones Studio
+          </div>
+
+       </div>
+
+       </body>
 
     </html>
   )

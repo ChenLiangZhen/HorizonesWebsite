@@ -1,8 +1,42 @@
+.baseLayout {
+
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
 .header {
+
+    height: 64px;
+    width: 100vw;
 
     display:flex;
     flex-direction: row;
-    height: 64px;
-    width: 100vw;
+
     background-color: blue;
+}
+
+.footer {
+
+    height: 36px;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:  center;
+
+    background-color: blue;
+    color: white;
+
+    font-family: Quicksand;
+    font-size: 0.8rem;
+    font-weight: 400;
+
+    letter-spacing: 0px;
 }
