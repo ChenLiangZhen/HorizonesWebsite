@@ -1,0 +1,41 @@
+.gameBaseLayout {
+
+    height: 100%;
+    width: 100%;
+
+    display: grid;
+    grid-template-rows: [top] 64px [contentTop] 1fr [contentBottom];
+    grid-template-columns: [left] 5vw [contentLeft] 1fr [contentRight] 5vw [right];
+}
+
+.gameContent {
+
+    grid-area: contentTop / contentLeft / contentBottom / contentRight;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+.header {
+
+    grid-area: top / left / contentTop / right;
+
+    //height: 64px;
+    //width: 100vw;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 1.25rem;
+}
