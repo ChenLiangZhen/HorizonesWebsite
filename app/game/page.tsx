@@ -44,8 +44,9 @@ export default function GamePage() {
 
 	function deleteNum() {
 
-		console.log(guessInput)
-		setGuessInput(guessInput.filter((item: any) => guessInput.indexOf(item) !== guessInput.length -1))
+		let tmp = guessInput.slice()
+		tmp.pop()
+		setGuessInput(tmp)
 	}
 
 	function guess() {
@@ -127,7 +128,7 @@ export default function GamePage() {
 					<div key={uuidv4()} className={styles.guessHistoryRow}>
 
 						<div>{guessResult.guessInput}</div>
-						<div>{"→"}</div>
+						<div>&nbsp;{"→"}&nbsp;</div>
 						<div>{guessResult.resultString}</div>
 
 					</div>
